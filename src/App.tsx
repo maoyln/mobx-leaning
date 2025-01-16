@@ -16,7 +16,7 @@ const App: React.FC = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/todoListView" element={<TodoListView />} />
         <Route path="/mobxDemo1" element={<MobxDemo1 />} />
-        <Route path="/myComponent" element={<MyComponent />} />
+        <Route path="/myComponent" element={<MyComponent />} />    
         <Route path="*" element={<NotFoundPage />} /> {/* 404 路由 */}
       </Routes>
     </Router>
