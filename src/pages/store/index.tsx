@@ -26,7 +26,7 @@ const RootStoreProvider: React.FC<RootStoreProviderProps> = ({children}) => {
   </RootStoreContext.Provider>
 };
 
-export default RootStoreProvider;
+export default RootStoreProvider; // 暂且称为环境组件
 
 
 // 3.封装一个获取上下文数据的方法
