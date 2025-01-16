@@ -4,12 +4,14 @@ import { observer } from "mobx-react";
 
 class User {
   // 状态（成员属性）
-  name: string = 'myl';
+  name: string = 'myl'; // 初始化值
   age: number = 18;
 
 
-  constructor() {
-    // 可观察的对象
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+    // 可观察的对象-autoBind可以支持解构，否则解构之后找不到this指向
     makeAutoObservable(this, {}, { autoBind: true });
   }
 
@@ -35,7 +37,7 @@ class User {
 }
 
 // 得到一个可以被观察的示例对象
-const user: User = new User();
+const user: User = new User('fj', 20);
 
 interface MyComponentProps {
   store: User;
