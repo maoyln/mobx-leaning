@@ -5,9 +5,7 @@ class User {
   name: string = 'myl'; // 初始化值
   age: number = 18;
 
-  constructor(name: string, age: number) {
-    this.name = name;
-    this.age = age;
+  constructor() {
     // 可观察的对象-autoBind可以支持解构，否则解构之后找不到this指向
     makeAutoObservable(this, {}, { autoBind: true });
   }
